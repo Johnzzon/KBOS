@@ -1,6 +1,6 @@
-#!/bin/bash 
+#!/bin/bash
 
-echo "***************************" 
+echo "***************************"
 echo "Checking for prerequisites"
 echo "***************************"
 
@@ -29,14 +29,14 @@ else
     echo "** sleepwatcher OK"
 fi
 
-echo "***********************" 
+echo "***********************"
 echo "Preparing sleep scripts"
-echo "***********************" 
+echo "***********************"
 
 # Copy sleepscripts to user directory
 mkdir -p ~/.sleepscripts || exit 1;
-cp ./disable_bluetooth.sh ~/.sleepscripts
-cp ./enable_bluetooth.sh ~/.sleepscripts
+cp ./disconnect.sh ~/.sleepscripts
+cp ./connect.sh ~/.sleepscripts
 chmod +x ~/.sleepscripts/** || exit 1;
 echo "** sleep scripts copied to ~/.sleepscripts"
 
@@ -45,4 +45,4 @@ cp ./sleepwatch_bluetooth.plist ~/Library/LaunchAgents
 launchctl load ~/Library/LaunchAgents/sleepwatch_bluetooth.plist
 echo "** sleepwatch_bluetooth.plist copied to ~/Library/LaunchAgents"
 
-echo "Kill-bluetooth has been successfully installed"
+echo "Auto-connect has been successfully installed"
