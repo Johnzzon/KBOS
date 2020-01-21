@@ -1,5 +1,7 @@
-# Kill Bluetooth On Sleep (KBOS)
+# Disconnect Bluetooth Devices On Sleep
 Tired of your bluetooth headphones pairing with a MacOs computer you thought was asleep ? This fixes that
+
+This repo is a fork of https://github.com/alb12-la/KBOS but instead of disabling bluetooth, it disconnects specific devices instead.
 
 KBOS uses `sleepwatcher` and `Blueutil` to turn off bluetooth when your mac falls asleep, then turns it back on when the computer is woken up.
 
